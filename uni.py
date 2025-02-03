@@ -32,10 +32,10 @@ def plots():
 
 	a2 = ax[1].contourf(X,Y,Z, 30)
 	ax[1].set_title(r'$p(\omega_1,\omega_2)$')
-	ax[1].set_xlabel(r'$\omega_1 / \Gamma_f$')
-	ax[1].set_ylabel(r'$\omega_2 / \Gamma_f$')
-	ax[1].set(xticks=[-1,0,1],xticklabels=[r'$\frac{\omega_0-\Gamma_f}{\Gamma_f}$',r'$\frac{\omega_0}{\Gamma_f}$',r'$\frac{\omega_0+\Gamma_f}{\Gamma_f}$'])#[r'$-\frac{2\pi}{t-t_0}$','0',r'$\frac{2\pi}{t-t_0}$'])
-	ax[1].set(yticks=[-1,0,1],yticklabels=[r'$\frac{\omega_0-\Gamma_f}{\Gamma_f}$',r'$\frac{\omega_0}{\Gamma_f}$',r'$\frac{\omega_0+\Gamma_f}{\Gamma_f}$'])#[r'$-\frac{2\pi}{t-t_0}$','0',r'$\frac{2\pi}{t-t_0}$'])
+	ax[1].set_xlabel(r'$\frac{\omega_1 - \omega_{0}}{\Gamma_f}$')
+	ax[1].set_ylabel(r'$\frac{\omega_2 - \omega_{0}}{\Gamma_f}$')
+	ax[1].set(xticks=[-1,0,1],xticklabels=[r'$-1$',r'$0$',r'$1$'])#[r'$-\frac{2\pi}{t-t_0}$','0',r'$\frac{2\pi}{t-t_0}$'])
+	ax[1].set(yticks=[-1,0,1],yticklabels=[r'$-1$',r'$0$',r'$1$'])#[r'$-\frac{2\pi}{t-t_0}$','0',r'$\frac{2\pi}{t-t_0}$'])
 	
 	return a1, a2
 	
