@@ -17,9 +17,9 @@ def plots():
 	Z /= N
 
 	a1 = ax[0].contourf(X,Y,Z, 50)
-	ax[0].set_title(r'$p(t_1,t_2)$')
-	ax[0].set_xlabel(r'$t_1$')
-	ax[0].set_ylabel(r'$t_2$')
+	ax[0].set_title(r'$p(t_2,t_1)$')
+	ax[0].set_xlabel(r'$\Gamma_{f}t_2$')
+	ax[0].set_ylabel(r'$\Gamma_{f}t_1$')
 	ax[0].set(xticks=[t0,t],xticklabels=[r'$-4$',r'$0$'])
 	ax[0].set(yticks=[t0,t],yticklabels=[r'$-4$',r'$0$'])
 
@@ -30,9 +30,9 @@ def plots():
 	Z = Z**-.5
 
 	a2 = ax[1].contourf(X,Y,Z, 30)
-	ax[1].set_title(r'$p(\omega_1,\omega_2)$')
-	ax[1].set_xlabel(r'$\frac{\omega_1 - \omega_{eg}}{\Gamma_f}$')
-	ax[1].set_ylabel(r'$\frac{\omega_2 - \omega_{fe}}{\Gamma_f}$')
+	ax[1].set_title(r'$p(\omega_2,\omega_1)$')
+	ax[1].set_xlabel(r'$\frac{\omega_2 - \omega_{eg}}{\Gamma_f}$')
+	ax[1].set_ylabel(r'$\frac{\omega_1 - \omega_{fe}}{\Gamma_f}$')
 	ax[1].set(xticks=[-1,0,1],xticklabels=[r'$-1$',r'$0$',r'$1$'])#[r'$-\frac{2\pi}{t-t_0}$','0',r'$\frac{2\pi}{t-t_0}$'])
 	ax[1].set(yticks=[-1,0,1],yticklabels=[r'$-1$',r'$0$',r'$1$'])#[r'$-\frac{2\pi}{t-t_0}$','0',r'$\frac{2\pi}{t-t_0}$'])
 	
