@@ -26,7 +26,7 @@ def plots():
 	X = np.linspace(-2,2,401)
 	X,Y = np.meshgrid(X,X)
 
-	Z = (Gamma_f**2 + (X+Y)**2) * (X**2 + Gamma_e**2 / 4)
+	Z = (Gamma_f**2 + (X+Y)**2) * (Y**2 + Gamma_e**2 / 4)
 	Z = Z**-.5
 
 	a2 = ax[1].contourf(X,Y,Z, 30)
