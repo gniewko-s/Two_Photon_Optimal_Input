@@ -11,7 +11,7 @@ def plots():
 	t0 = -4; t = 0
 	X = np.linspace(t0,t,201)
 	X,Y = np.meshgrid(X,X)
-	N = 4 / (Gamma_e * Gamma_f)
+	N = 2 / (Gamma_e * Gamma_f)
 	Z = np.exp((Gamma_f-Gamma_e)/2*X + Gamma_e/2*Y) * (X>t0) * (X<t) * (Y<=X)  + \
 		np.exp((Gamma_f-Gamma_e)/2*Y + Gamma_e/2*X) * (Y>t0) * (Y<t) * (X<Y)
 	Z **= 2
@@ -28,7 +28,7 @@ def plots():
 	X = np.linspace(-2,2,401)
 	X,Y = np.meshgrid(X,X)
 
-	Z = (Gamma_e**2 + (X+Y)**2) / ((Gamma_e**2/2-X*Y)**2 + (Gamma_e/2 * (X+Y))**2) / ( (X+Y)**2 + Gamma_f**2/4 ) / (4*np.pi)**2
+	Z = Gamma_e*Gamma_f*(Gamma_e**2 + (X+Y)**2) / ((X**2+Gamma_e**2/4)*(Y**2+Gamma_e**2/4)*((X+Y)**2 + Gamma_f**2/4)*8*(np.pi)**2)
 
 	a2 = ax[1].contourf(X,Y,Z, 30)
 	ax[1].set_title(r'$p(\omega_2,\omega_1)$')
